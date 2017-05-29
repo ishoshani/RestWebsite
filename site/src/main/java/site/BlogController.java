@@ -24,18 +24,18 @@ public class BlogController{
     Calendar today = Calendar.getInstance();
     int month = today.get(today.MONTH);
     int year = today.get(today.YEAR);
-    Blog n = new Blog(counter.incrementAndGet(),title,month,year,currentDate,currentDate);
+    Blogs n = new Blogs(counter.incrementAndGet(),title,month,year,currentDate,currentDate);
     blogRepository.save(n);
     return "Saved";
   }
   @RequestMapping("/find")
-  public @ResponseBody Blog findBlog(@RequestParam long id){
+  public @ResponseBody Blogs findBlog(@RequestParam long id){
     return blogRepository.findOne(id);
   }
 
 
   @RequestMapping("/all")
-  public @ResponseBody Iterable<Blog> getAll(){
+  public @ResponseBody Iterable<Blogs> getAll(){
     return blogRepository.findAll();
   }
 
