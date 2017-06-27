@@ -1,0 +1,47 @@
+<style>
+        .navbar{
+            background: #3ebae8;
+            border-bottom: thin;
+            border-color: #111;
+        }
+        .navbar-default .navbar-brand {
+            color: #111;
+        }
+        .navbar-default .navbar-text {
+            color: #111;
+        }
+        .navbar-default .navbar-nav>li>a{
+            color: #111;
+        }
+    </style>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+               <div class ="navbar-brand">
+                    <span href="javascript:void(0)" style="cursor:pointer" onclick="hamburger()">&#9776;</span>
+
+               </div>
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/')}}" style="cursor:pointer" >
+
+                    Ido Shoshani
+
+                </a>
+            </div>
+            <p class="navbar-text">Coffee, code, games</p>
+            <a class="navbar-text navbar-link" href="{{url('blog')}}" style="cursor:pointer">Blogs</a>
+            <a class="navbar-text navbar-link" href="{{url('projects')}}" style="cursor:pointer">Projects</a>
+
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links
+                   <li><a href="{{ url('logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                  -->
+                </ul>
+            </div>
+        </div>
+    </nav>

@@ -25,7 +25,7 @@ jar {
 
 sourceCompatibility = 1.8
 
-task buildDocker(type: Docker, dependsOn: build) {
+task buildDocker(type: Docker) {
   push = true
   applicationName = jar.baseName
   dockerfile = file('src/main/docker/Dockerfile')
